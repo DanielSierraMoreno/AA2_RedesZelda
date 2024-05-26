@@ -1,0 +1,5 @@
+﻿  Player.cpp
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "ResourcesClass/Player.cpp")
+  
+  ClaseRedesCDI.vcxproj -> F:\Descargas\ZELDABASEDANIEL\ZELDABASE\Debug\ClaseRedesCDI.exe
