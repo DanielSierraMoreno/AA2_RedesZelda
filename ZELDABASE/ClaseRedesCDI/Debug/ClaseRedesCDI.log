@@ -1,5 +1,131 @@
-﻿  Player.cpp
+﻿  ClaseRedesCDI.cpp
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "ClaseRedesCDI.cpp")
+  
+  Button.cpp
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244: 'argumento': conversión de 'unsigned int' a 'T'; posible pérdida de datos
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:         with
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:         [
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:             T=float
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:         ]
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244: 'argumento': conversión de 'unsigned int' a 'T'; posible pérdida de datos
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:         with
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:         [
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:             T=float
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:         ]
+  ConsoleControl.cpp
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "ResourcesClass/ConsoleControl.cpp")
+  
+  Player.cpp
 F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
   (compilando archivo de origen "ResourcesClass/Player.cpp")
   
+  Animation.cpp
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Timer.h(13,2): warning C4091: 'static ': se ha omitido a la izquierda de 'Timer' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "ResourcesClass/Animation.cpp")
+  
+  LinkCharacter.cpp
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "ResourcesClass/LinkCharacter.cpp")
+  
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:         with
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:         [
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:             T=unsigned int
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:         ]
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:         with
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:         [
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:             T=unsigned int
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:         ]
+  Timer.cpp
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Timer.h(13,2): warning C4091: 'static ': se ha omitido a la izquierda de 'Timer' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "ResourcesClass/Timer.cpp")
+  
+  UdpAddress.cpp
+  UdpConnection.cpp
+  UdpPacket.cpp
+  UdpSocket.cpp
+  Window.cpp
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:         with
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:         [
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:             T=float
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:         ]
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:         with
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:         [
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:             T=float
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:         ]
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:         with
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:         [
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:             T=float
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:         ]
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:         with
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:         [
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:             T=float
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:         ]
+F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(198,21): warning C4018: '<': no coinciden signed/unsigned
+  Generando código...
+sfml-system-s-d.lib(Clock.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(Clock.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(Err.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(Err.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(Lock.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(Lock.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(Mutex.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(Mutex.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(Sleep.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(Sleep.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(String.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(String.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(ThreadLocal.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(ThreadLocal.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(Time.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(Time.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(ClockImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(ClockImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(MutexImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(MutexImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(SleepImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(SleepImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-system-s-d.lib(ThreadLocalImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(ThreadLocalImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-network-s-d.lib(Http.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-network-s-d.lib(Http.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-network-s-d.lib(IpAddress.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-network-s-d.lib(IpAddress.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-network-s-d.lib(Packet.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-network-s-d.lib(Packet.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-network-s-d.lib(Socket.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-network-s-d.lib(Socket.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-network-s-d.lib(TcpSocket.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-network-s-d.lib(TcpSocket.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-network-s-d.lib(UdpSocket.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-network-s-d.lib(UdpSocket.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-network-s-d.lib(SocketImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-network-s-d.lib(SocketImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(Context.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(Context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(Cursor.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(Cursor.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(GlContext.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(GlContext.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(GlResource.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(GlResource.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(Joystick.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(Joystick.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(JoystickManager.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(JoystickManager.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(SensorManager.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(SensorManager.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(VideoMode.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(VideoMode.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(Window.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(Window.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(WindowBase.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(WindowBase.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(WindowImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(WindowImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(CursorImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(CursorImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(JoystickImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(JoystickImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(SensorImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(SensorImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(VideoModeImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(VideoModeImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(VulkanImplWin32.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(VulkanImplWin32.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(WindowImplWin32.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(WindowImplWin32.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-window-s-d.lib(WglContext.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-window-s-d.lib(WglContext.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(BlendMode.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(BlendMode.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(Color.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(Color.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(Glsl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(Glsl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(GLCheck.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(GLCheck.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(GLExtensions.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(GLExtensions.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(Image.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(Image.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(ImageLoader.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(ImageLoader.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(RenderStates.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(RenderStates.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(RenderTarget.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(RenderTarget.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(RenderWindow.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(RenderWindow.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(Shader.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(Shader.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(Texture.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(Texture.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(TextureSaver.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(TextureSaver.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(Transform.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(Transform.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(Transformable.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(Transformable.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(View.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(View.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(Vertex.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(Vertex.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(Sprite.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(Sprite.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(VertexBuffer.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(VertexBuffer.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(RenderTextureImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(RenderTextureImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+sfml-graphics-s-d.lib(RenderTextureImplFBO.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(RenderTextureImplFBO.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
   ClaseRedesCDI.vcxproj -> F:\Descargas\ZELDABASEDANIEL\ZELDABASE\Debug\ClaseRedesCDI.exe
