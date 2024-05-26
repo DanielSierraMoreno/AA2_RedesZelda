@@ -1,46 +1,46 @@
 ﻿  ClaseRedesCDI.cpp
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
   (compilando archivo de origen "ClaseRedesCDI.cpp")
   
   Button.cpp
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244: 'argumento': conversión de 'unsigned int' a 'T'; posible pérdida de datos
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:         with
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:         [
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:             T=float
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:         ]
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244: 'argumento': conversión de 'unsigned int' a 'T'; posible pérdida de datos
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:         with
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:         [
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:             T=float
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:         ]
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244: 'argumento': conversión de 'unsigned int' a 'T'; posible pérdida de datos
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:         with
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:         [
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:             T=float
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Button.cpp(31,45): warning C4244:         ]
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244: 'argumento': conversión de 'unsigned int' a 'T'; posible pérdida de datos
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:         with
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:         [
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:             T=float
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Button.cpp(31,42): warning C4244:         ]
   ConsoleControl.cpp
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
   (compilando archivo de origen "ResourcesClass/ConsoleControl.cpp")
   
   Player.cpp
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
   (compilando archivo de origen "ResourcesClass/Player.cpp")
   
   Animation.cpp
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Timer.h(13,2): warning C4091: 'static ': se ha omitido a la izquierda de 'Timer' cuando no hay ninguna variable declarada
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Timer.h(13,2): warning C4091: 'static ': se ha omitido a la izquierda de 'Timer' cuando no hay ninguna variable declarada
   (compilando archivo de origen "ResourcesClass/Animation.cpp")
   
   LinkCharacter.cpp
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\ConsoleControl.h(57,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
   (compilando archivo de origen "ResourcesClass/LinkCharacter.cpp")
   
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:         with
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:         [
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:             T=unsigned int
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:         ]
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:         with
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:         [
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:             T=unsigned int
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:         ]
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:         with
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:         [
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:             T=unsigned int
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,50): warning C4244:         ]
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:         with
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:         [
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:             T=unsigned int
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\LinkCharacter.cpp(6,33): warning C4244:         ]
   Timer.cpp
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Timer.h(13,2): warning C4091: 'static ': se ha omitido a la izquierda de 'Timer' cuando no hay ninguna variable declarada
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Timer.h(13,2): warning C4091: 'static ': se ha omitido a la izquierda de 'Timer' cuando no hay ninguna variable declarada
   (compilando archivo de origen "ResourcesClass/Timer.cpp")
   
   UdpAddress.cpp
@@ -48,27 +48,27 @@ F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Timer.h(13,2): warning C40
   UdpPacket.cpp
   UdpSocket.cpp
   Window.cpp
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:         with
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:         [
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:             T=float
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:         ]
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:         with
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:         [
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:             T=float
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:         ]
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:         with
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:         [
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:             T=float
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:         ]
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:         with
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:         [
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:             T=float
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:         ]
-F:\Descargas\ZELDABASEDANIEL\ZELDABASE\ResourcesClass\Window.cpp(198,21): warning C4018: '<': no coinciden signed/unsigned
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:         with
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:         [
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:             T=float
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(135,61): warning C4244:         ]
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:         with
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:         [
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:             T=float
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(135,44): warning C4244:         ]
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:         with
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:         [
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:             T=float
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(152,113): warning C4244:         ]
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244: 'argumento': conversión de 'T' a 'unsigned int'; posible pérdida de datos
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:         with
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:         [
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:             T=float
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(152,96): warning C4244:         ]
+F:\AA2_RedesZelda\ZELDABASE\ResourcesClass\Window.cpp(198,21): warning C4018: '<': no coinciden signed/unsigned
   Generando código...
 sfml-system-s-d.lib(Clock.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(Clock.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 sfml-system-s-d.lib(Err.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-system-s-d.lib(Err.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
@@ -128,4 +128,4 @@ sfml-graphics-s-d.lib(Sprite.obj) : warning LNK4099: no se encontró PDB '' con 
 sfml-graphics-s-d.lib(VertexBuffer.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(VertexBuffer.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 sfml-graphics-s-d.lib(RenderTextureImpl.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(RenderTextureImpl.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
 sfml-graphics-s-d.lib(RenderTextureImplFBO.obj) : warning LNK4099: no se encontró PDB '' con 'sfml-graphics-s-d.lib(RenderTextureImplFBO.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-  ClaseRedesCDI.vcxproj -> F:\Descargas\ZELDABASEDANIEL\ZELDABASE\Debug\ClaseRedesCDI.exe
+  ClaseRedesCDI.vcxproj -> F:\AA2_RedesZelda\ZELDABASE\Debug\ClaseRedesCDI.exe
