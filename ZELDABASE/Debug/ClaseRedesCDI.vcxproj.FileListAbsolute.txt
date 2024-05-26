@@ -1,4 +1,0 @@
-C:\Users\EmmaPolancoGarcia\Desktop\XarxasENTI3CDI\Xarxas2ENTI\Debug\ClaseRedesCDI.exe
-C:\Users\EmmaPolancoGarcia\Desktop\AA2_Zelda_Online\AA2_Zelda_Xarxas\Debug\ClaseRedesCDI.exe
-C:\Users\EmmaPolancoGarcia\Desktop\ZELDA_REPO_AA2\aa2_zelda_udp\Debug\ClaseRedesCDI.exe
-C:\Users\emmap\Desktop\ZELDABASE\Debug\ClaseRedesCDI.exe
