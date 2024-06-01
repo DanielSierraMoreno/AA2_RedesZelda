@@ -698,8 +698,27 @@ void Server::GameLoop()
             }
             for (int i = 0; i < eraseValues.size(); i++)
             {
-                if(clients.find(eraseValues[i]) != clients.end())
+                if (clients.find(eraseValues[i]) != clients.end())
+                {
+                    if (clients.find(eraseValues[i])->second->hasBomb)
+                    {
+                        if (bombs.find(clients.find(eraseValues[i])->second->bombID) != bombs.end())
+                        {
+                            bombs.find(clients.find(eraseValues[i])->second->bombID)->second->action = IDLEBOMB;
+                            bombs.find(clients.find(eraseValues[i])->second->bombID)->second->clientID = -1;
+                            bombs.find(clients.find(eraseValues[i])->second->bombID)->second->posX = clients.find(eraseValues[i])->second->posX;
+
+                            bombs.find(clients.find(eraseValues[i])->second->bombID)->second->posY = clients.find(eraseValues[i])->second->posY+25;
+
+                        }
+                    }
+
+
+
                     clients.erase(eraseValues[i]);
+
+
+                }
 
             }
             eraseValues.clear();
