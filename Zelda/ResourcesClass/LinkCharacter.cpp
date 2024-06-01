@@ -9,6 +9,7 @@ LinkCharacter::LinkCharacter(sf::Vector2u startPosition, std::string name)
 
 LinkCharacter::~LinkCharacter()
 {
+	delete idle;
 	delete moveRightAnim;
 	delete moveLeftAnim;
 	delete moveUpAnim;
@@ -42,7 +43,7 @@ sf::Texture* LinkCharacter::GetSpriteAtlas()
 	if (spriteAtlas == nullptr)
 	{
 		spriteAtlas = new sf::Texture();
-		if (!spriteAtlas->loadFromFile("ResourcesClass/Link.png"))
+		if (!spriteAtlas->loadFromFile("Resources/Link.png"))
 		{
 			ConsoleControl::LockMutex();
 			std::cout << "Error al cargar el atlas de link";

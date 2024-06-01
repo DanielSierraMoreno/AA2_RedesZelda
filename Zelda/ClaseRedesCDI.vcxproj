@@ -139,13 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ResourcesClass\Bomb.cpp" />
     <ClCompile Include="ClaseRedesCDI.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="ResourcesClass\Button.cpp" />
     <ClCompile Include="ResourcesClass\ConsoleControl.cpp" />
     <ClCompile Include="ResourcesClass\Player.cpp" />
     <ClCompile Include="ResourcesClass\Animation.cpp" />
     <ClCompile Include="ResourcesClass\LinkCharacter.cpp" />
     <ClCompile Include="ResourcesClass\Timer.cpp" />
+    <ClCompile Include="ResourcesClass\Utils.cpp" />
+    <ClCompile Include="Server.cpp" />
     <ClCompile Include="UDP\UdpAddress.cpp" />
     <ClCompile Include="UDP\UdpConnection.cpp" />
     <ClCompile Include="UDP\UdpPacket.cpp" />
@@ -153,6 +158,9 @@
     <ClCompile Include="ResourcesClass\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ResourcesClass\Bomb.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="ResourcesClass\Button.h" />
     <ClInclude Include="ResourcesClass\ConsoleControl.h" />
     <ClInclude Include="ICodable.h" />
@@ -160,6 +168,8 @@
     <ClInclude Include="ResourcesClass\Animation.h" />
     <ClInclude Include="ResourcesClass\LinkCharacter.h" />
     <ClInclude Include="ResourcesClass\Timer.h" />
+    <ClInclude Include="ResourcesClass\Utils.h" />
+    <ClInclude Include="Server.h" />
     <ClInclude Include="UDP\UdpAddress.h" />
     <ClInclude Include="UDP\UdpConnection.h" />
     <ClInclude Include="UDP\UdpPacket.h" />

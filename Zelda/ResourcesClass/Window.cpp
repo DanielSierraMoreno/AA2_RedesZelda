@@ -1,10 +1,12 @@
 #include "Window.h"
+#include "../Client.h"
 
-Window::Window(unsigned int width, unsigned int height, std::string title)
+Window::Window(unsigned int width, unsigned int height, std::string title, Client* client)
 {
 	_width = width;
 	_height = height;
 	_title = title;
+	this->client = client;
 }
 
 void Window::Init()
@@ -118,7 +120,9 @@ void Window::RunWindowsLoop()
 			{
 			case sf::Event::Closed:
 			{
+				client->game->EndGame();
 				_window.close();
+
 				break;
 			}
 			case sf::Event::MouseButtonPressed:
@@ -215,6 +219,13 @@ void Window::AddTask(Task task)
 	_taskMutex.lock();
 	_tasks.push_back(task);
 	_taskMutex.unlock();
+}
+
+void Window::EraseDrawable(sf::Drawable* drawable)
+{
+	_mutex.lock();
+	_objectsToDraw.remove(drawable);
+	_mutex.unlock();
 }
 
 void Window::SubscribeKeyPressed(sf::Keyboard::Key key, OnKeyPressed onKeyPressed)

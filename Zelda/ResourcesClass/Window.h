@@ -5,7 +5,7 @@
 
 #include "Button.h"
 
-
+class Client;
 
 class Window
 {
@@ -14,7 +14,7 @@ public:
 	typedef std::function<void()> OnKeyPressed;
 	typedef std::function<void()> OnKeyReleased;
 
-	Window(unsigned int width = 800, unsigned int height = 600, std::string title = "Window");
+	Window(unsigned int width = 800, unsigned int height = 600, std::string title = "Window", Client * client = nullptr);
 	void Init();
 
 
@@ -33,7 +33,7 @@ public:
 
 	//LAMBDA TASKS
 	void AddTask(Task task);
-
+	void EraseDrawable(sf::Drawable* drawable);
 
 	bool IsOpen() const
 	{
@@ -43,7 +43,7 @@ public:
 
 	void SubscribeKeyPressed(sf::Keyboard::Key key, OnKeyPressed onKeyPressed);
 	void SubscribeKeyReleased(sf::Keyboard::Key key, OnKeyReleased onKeyReleased);
-
+	Client* client;
 private:
 	//LAMBDA TASK
 	std::mutex _taskMutex;

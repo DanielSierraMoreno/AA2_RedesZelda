@@ -11,6 +11,7 @@ public:
 	~LinkCharacter();
 
 	const sf::Vector2i LinkSize = sf::Vector2i(32, 32);
+	Animation* idle = new Animation(this, sf::Vector2i(8, 72), LinkSize, 1000, 1, 10, 1, false);
 
 	Animation* moveDownAnim = new Animation(this, sf::Vector2i(8, 72), LinkSize, 1000,10, 10, 1, false);
 	Animation* moveLeftAnim = new Animation(this, sf::Vector2i(344, 72), LinkSize, 1000, 10, 10, 1, false);

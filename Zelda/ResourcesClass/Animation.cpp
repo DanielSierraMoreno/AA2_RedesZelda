@@ -57,6 +57,7 @@ void Animation::Stop()
 {
 	_mutex.lock();
 	_playing = false;
+
 	_mutex.unlock();
 }
 

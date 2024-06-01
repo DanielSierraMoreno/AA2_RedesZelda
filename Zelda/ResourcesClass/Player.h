@@ -4,29 +4,43 @@
 #include "LinkCharacter.h"
 #include "ConsoleControl.h"
 #include "Window.h"
+#include "Utils.h"
 
 #define POSITION_INCREMENT 5
-enum Orientation { UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3 };
+
+class Client;
 
 class Player
 {
 public:
-	Player(Window* window);
+	Player(Window* window, bool player, Client* client, ClientData* data);
 	~Player();
 
 	void Update();
 
+	void UpdateValues(ClientData* data);
 	LinkCharacter* playerLink;
 
 	void MoveUp();
 	void MoveDown();
 	void MoveLeft();
 	void MoveRight();
+	void Attack();
+	void Grab();
+	void setPos(float x, float y);
+	void Stop();
+	bool checked;
+	ClientData* lastFrameData;
+	ClientData* data;
+	sf::Text* name;
 
 private:
+	Client* client;
+	sf::Sprite* sword;
 
 	Orientation _orientation;
 	Window* _window;
 	Animation* _currentAnim;
 	sf::Vector2f _position;
+	bool IsPlayer;
 };

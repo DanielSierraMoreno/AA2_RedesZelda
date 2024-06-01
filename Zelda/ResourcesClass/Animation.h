@@ -21,7 +21,7 @@ public:
 
 	void ResetFrame();
 	bool NextFrame();
-
+	bool IsPlaying() { return _playing; }
 private:
 	sf::Sprite* _target = nullptr;
 	sf::Vector2i _startOffset;

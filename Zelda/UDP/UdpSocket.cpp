@@ -36,10 +36,12 @@ UdpSocket::UdpSocket(UdpAddress::PortNumber port, OnConnectionEnter onConectionE
 
 	if (this->bind(port) != sf::Socket::Done)
 	{
-		//TODO Manage Error
+		std::cout << "Error to create";
 	}
 	else
 	{
+		std::cout << "\n" << this->_address.ToString();
+
 		std::thread* loopThread = new std::thread(&UdpSocket::ReceiveLoop, this);
 		loopThread->detach();
 	}
@@ -176,6 +178,7 @@ void UdpSocket::SendAccumulating(UdpAddress address, UdpPacket packet)
 
 void UdpSocket::SendImmediately(UdpAddress address, UdpPacket packet)
 {
-	std::cout << "Sending Packet To: " << address.ToString();
+	std::cout << "\n" << "Sending Packet To: " << address.ToString();
 	this->send(packet, address.ip, address.port);
+
 }
