@@ -399,17 +399,19 @@ Server::Server()
 
     mutex2.lock();
 
+
+    sf::Packet packet;
+
+    packet << static_cast<int>(PacketKeys::DisconnectConfirmation);
+
+    SendPacket(player, packet);
+
+
     if (clients.find(player->clientID) != clients.end())
     {
-        sf::Packet packet;
-
-        packet << static_cast<int>(PacketKeys::DisconnectConfirmation);
-
-        SendPacket(player, packet);
-
         eraseValues.push_back(player->clientID);
-
     }
+
 
     mutex2.unlock();
 
@@ -461,24 +463,44 @@ void Server::ReceiveLoop()
                 std::string name;
                 *p >> name;
 
+                bool exist = false;
                 ClientData* data = new ClientData();
-                data->ip = ipAdr->toString();
-                data->port = *port;
-                data->name = name;
-                data->clientID = currentClientID;
+                int id = 0;
+                for (auto it2 = clients.begin(); it2 != clients.end(); it2++) {
 
-                data->checkAFK = 0;
-                data->posX = getRandomInt(WindowWidth());
-                data->posY = getRandomInt(WindowHeight());
+                    if (it2->second->ip == ipAdr->toString() && it2->second->port == *port)
+                    {
+                        exist = true;
+                        id = it2->second->clientID;
+                    }
+                }
 
-                clients[currentClientID] = data;
+
+                if (!exist)
+                {
+                        data->ip = ipAdr->toString();
+                        data->port = *port;
+                        data->name = name;
+                        data->clientID = currentClientID;
+
+                        data->checkAFK = 0;
+                        data->posX = getRandomInt(WindowWidth());
+                        data->posY = getRandomInt(WindowHeight());
+                        clients[currentClientID] = data;
+                        currentClientID++;
+
+                }
+                else
+                {
+                    data = clients[id];
+                }
+
 
                 auto it = packets.find(key);
                 if (it != packets.end()) {
                     it->second(*p, data);
                 }
 
-                currentClientID++;
             }
             else
             {
