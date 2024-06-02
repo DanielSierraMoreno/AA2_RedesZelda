@@ -254,7 +254,7 @@ void Player::Update()
 
 			playerLink->setPosition({ (float)this->data->posX, (float)this->data->posY });
 			if (name != nullptr)
-				name->setPosition({ (float)this->data->posX, (float)this->data->posY - 10 });
+				name->setPosition({ (float)this->data->posX-10, (float)this->data->posY - 20 });
 
 
 		}
@@ -527,7 +527,7 @@ void Player::UpdateValues(ClientData* data)
 
 	playerLink->setPosition({ (float)this->data->posX, (float)this->data->posY });
 	if(name != nullptr)
-		name->setPosition({ (float)this->data->posX, (float)this->data->posY-10 });
+		name->setPosition({ (float)this->data->posX-10, (float)this->data->posY-20 });
 
 	if(client->startMove >= 15 && client->clientData->action == MOVE)
 		Stop();
@@ -552,7 +552,14 @@ void Player::MoveUp()
 
 	sf::Packet p;
 	p << static_cast<int>(PacketKeys::UpdateClient) << data;
-	client->SendPacket(p);
+
+	if (client->clientData->action == MOVE && client->clientData->orientation == UP)
+	{
+	}
+	else
+		client->SendPacket(p);
+
+
 }
 
 void Player::MoveDown()
@@ -570,6 +577,10 @@ void Player::MoveDown()
 
 	sf::Packet p;
 	p << static_cast<int>(PacketKeys::UpdateClient) << data;
+	if (client->clientData->action == MOVE && client->clientData->orientation == DOWN)
+	{
+	}
+	else
 	client->SendPacket(p);
 }
 
@@ -587,6 +598,11 @@ void Player::MoveLeft()
 
 	sf::Packet p;
 	p << static_cast<int>(PacketKeys::UpdateClient) << data;
+
+	if (client->clientData->action == MOVE && client->clientData->orientation == LEFT)
+	{
+	}
+	else
 	client->SendPacket(p);
 }
 
@@ -603,12 +619,17 @@ void Player::MoveRight()
 	data.action = MOVE;
 	sf::Packet p;
 	p << static_cast<int>(PacketKeys::UpdateClient) << data;
+
+	if (client->clientData->action == MOVE && client->clientData->orientation == RIGHT)
+	{
+	}
+	else
 	client->SendPacket(p);
 }
 
 void Player::Attack()
 {
-	if (client->clientData->action != ATTACK && client->clientData->action != GRAB)
+	if (client->clientData->action != ATTACK && client->clientData->action != GRAB && !client->clientData->hasBomb)
 	{
 		ClientData data = *client->clientData;
 

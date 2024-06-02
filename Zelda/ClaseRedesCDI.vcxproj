@@ -177,6 +177,7 @@
     <ClInclude Include="ResourcesClass\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="ResourcesClass\Bomb.png" />
     <Image Include="ResourcesClass\Bombs.png" />
     <Image Include="ResourcesClass\Link.png" />
   </ItemGroup>

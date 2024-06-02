@@ -15,6 +15,8 @@ public:
 	const sf::Vector2i bombSpriteSize = sf::Vector2i(41, 50);
 	Animation* currentAnim;
 	Animation* staticBomb = new Animation(this, sf::Vector2i(0, 16), bombSize, 400, 1, 1, 1, false);
+	Animation* parpadeo = new Animation(this, sf::Vector2i(385, 16), bombSize, 2000, 10, 10, 1, false);
+
 	Animation* explosion = new Animation(this, sf::Vector2i(32, 0), bombSpriteSize, 1000, 8, 8, 1, false);
 private:
 

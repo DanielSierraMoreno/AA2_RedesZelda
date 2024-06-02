@@ -104,7 +104,7 @@ void Game::UpdateBomb(BombData* data)
         {
             bombs.find(data->bombID)->second->setPosition(data->posX, data->posY);
 
-            if (bombs.find(data->bombID)->second->currentAnim == bombs.find(data->bombID)->second->staticBomb && data->action == EXPLOTE)
+            if (bombs.find(data->bombID)->second->currentAnim == bombs.find(data->bombID)->second->parpadeo && data->action == EXPLOTE)
             {
 
                 bombs.find(data->bombID)->second->currentAnim = bombs.find(data->bombID)->second->explosion;
@@ -115,6 +115,16 @@ void Game::UpdateBomb(BombData* data)
                     });
             }
 
+            if (bombs.find(data->bombID)->second->currentAnim == bombs.find(data->bombID)->second->staticBomb && data->action == STARTEXPLOSION)
+            {
+
+                bombs.find(data->bombID)->second->currentAnim = bombs.find(data->bombID)->second->parpadeo;
+                bombs.find(data->bombID)->second->currentAnim->PlayOnce([&]() {
+
+
+
+                    });
+            }
 
 
 

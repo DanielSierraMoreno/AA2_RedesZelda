@@ -215,7 +215,7 @@ Server::Server()
 
 
                                 bombs[clients[player->clientID]->bombID]->clientID = -1;
-                                bombs[clients[player->clientID]->bombID]->action = STARTEXPLOSION;
+                                bombs[clients[player->clientID]->bombID]->action = RELEASE;
                                 bombs[clients[player->clientID]->bombID]->posX = clients[player->clientID]->posX+5;
                                 bombs[clients[player->clientID]->bombID]->posY = clients[player->clientID]->posY-25;
 
@@ -262,7 +262,7 @@ Server::Server()
 
 
                                 bombs[clients[player->clientID]->bombID]->clientID = -1;
-                                bombs[clients[player->clientID]->bombID]->action = STARTEXPLOSION;
+                                bombs[clients[player->clientID]->bombID]->action = RELEASE;
                                 bombs[clients[player->clientID]->bombID]->posX = clients[player->clientID]->posX+5;
                                 bombs[clients[player->clientID]->bombID]->posY = clients[player->clientID]->posY+20;
 
@@ -305,7 +305,7 @@ Server::Server()
 
 
                                 bombs[clients[player->clientID]->bombID]->clientID = -1;
-                                bombs[clients[player->clientID]->bombID]->action = STARTEXPLOSION;
+                                bombs[clients[player->clientID]->bombID]->action = RELEASE;
                                 bombs[clients[player->clientID]->bombID]->posX = clients[player->clientID]->posX+30;
                                 bombs[clients[player->clientID]->bombID]->posY = clients[player->clientID]->posY+10;
 
@@ -350,7 +350,7 @@ Server::Server()
 
 
                                 bombs[clients[player->clientID]->bombID]->clientID = -1;
-                                bombs[clients[player->clientID]->bombID]->action = STARTEXPLOSION;
+                                bombs[clients[player->clientID]->bombID]->action = RELEASE;
 
                                 bombs[clients[player->clientID]->bombID]->posX = clients[player->clientID]->posX-20;
                                 bombs[clients[player->clientID]->bombID]->posY = clients[player->clientID]->posY+10;
@@ -606,15 +606,37 @@ void Server::GameLoop()
 
             std::vector<int> eraseBomb;
             for (auto it = bombs.begin(); it != bombs.end(); it++) {
-                if ((currentTimeMillis - it->second->timeToExplote) >= 3000 && (it->second->action == STARTEXPLOSION))
+
+                if ((currentTimeMillis - it->second->timeToExplote) >= 1000 && (it->second->action == RELEASE))
+                {
+                    it->second->action = STARTEXPLOSION;
+
+
+                    auto currentTime = std::chrono::high_resolution_clock::now();
+
+                    auto duration = std::chrono::duration<float, std::milli>(currentTime.time_since_epoch());
+
+                    float currentTimeMillis = duration.count();
+
+                    it->second->timeToExplote = currentTimeMillis;
+                }
+
+                if ((currentTimeMillis - it->second->timeToExplote) >= 2000 && (it->second->action == STARTEXPLOSION))
                 {
                     it->second->action = EXPLOTE;
                     it->second->posX -= 15;
                     it->second->posY -= 20;
 
+                    auto currentTime = std::chrono::high_resolution_clock::now();
+
+                    auto duration = std::chrono::duration<float, std::milli>(currentTime.time_since_epoch());
+
+                    float currentTimeMillis = duration.count();
+
+                    it->second->timeToExplote = currentTimeMillis;
                 }
 
-                if ((currentTimeMillis - it->second->timeToExplote) >= 3500 && (it->second->action == EXPLOTE))
+                if ((currentTimeMillis - it->second->timeToExplote) >= 500 && (it->second->action == EXPLOTE))
                 {
 
                     for (auto it2 = clients.begin(); it2 != clients.end(); it2++) {
@@ -731,7 +753,14 @@ void Server::GameLoop()
                     {
                         if (bombs.find(clients.find(eraseValues[i])->second->bombID) != bombs.end())
                         {
-                            bombs.find(clients.find(eraseValues[i])->second->bombID)->second->action = IDLEBOMB;
+                            auto currentTime = std::chrono::high_resolution_clock::now();
+
+                            auto duration = std::chrono::duration<float, std::milli>(currentTime.time_since_epoch());
+
+                            float currentTimeMillis = duration.count();
+
+                            bombs.find(clients.find(eraseValues[i])->second->bombID)->second->timeToExplote = currentTimeMillis;
+                            bombs.find(clients.find(eraseValues[i])->second->bombID)->second->action = STARTEXPLOSION;
                             bombs.find(clients.find(eraseValues[i])->second->bombID)->second->clientID = -1;
                             bombs.find(clients.find(eraseValues[i])->second->bombID)->second->posX = clients.find(eraseValues[i])->second->posX;
 

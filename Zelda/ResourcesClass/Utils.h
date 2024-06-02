@@ -7,7 +7,7 @@
 enum class PacketKeys { LoginServer, UpdateRoom, LoginConfirmClient, UpdateClient, DisconnectClient, DisconnectClientToServer, DisconnectConfirmation, UpdateBombs};
 enum Orientation { UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3 };
 enum Action { IDLE = 0, MOVE = 1, ATTACK = 2, GRAB = 3 };
-enum ActionBomb { IDLEBOMB = 0, EXPLOTE = 1, STARTEXPLOSION = 2 };
+enum ActionBomb { IDLEBOMB = 0, EXPLOTE = 1, STARTEXPLOSION = 2, RELEASE = 3 };
 
 #define PORT 500;
 
