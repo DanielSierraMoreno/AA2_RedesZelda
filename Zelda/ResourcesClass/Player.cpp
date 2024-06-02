@@ -3,6 +3,7 @@
 
 Player::Player(Window* window, bool player, Client* client, ClientData* data) //: GameObject()
 {
+	CheckUpdate = true;
 	_window = window;
 	lastFrameData = data;
 
@@ -114,95 +115,159 @@ Player::Player(Window* window, bool player, Client* client, ClientData* data) //
 Player::~Player()
 {
 	delete playerLink;
+	delete lastFrameData;
+	delete data;
+	delete name;
+	delete client;
+	delete sword;
+	delete _currentAnim;
 }
 
 void Player::Update()
 {
-	if (IsPlayer)
+	//Si no se actualiza y te estabas moviendo, te continuas moviendo
+	if (CheckUpdate)
 	{
 
-
-		//switch (ConsoleControl::ReadNextKey())
-		//{
-		//case KB_UP:
-		//{
-		//	//If the animation has not ended yet
-		//	if (_currentAnim != nullptr)
-		//		_currentAnim->Stop();
-
-		//	_currentAnim = playerLink->moveUpAnim;
-
-
-		//	_position.y -= POSITION_INCREMENT;
-		//	_orientation = UP;
-
-		//	_currentAnim->PlayOnce([&]() {
-		//		_currentAnim->Stop();
-
-		//		});
-
-		//	break;
-		//}
-		//case KB_DOWN:
-		//{
-		//	if (_currentAnim != nullptr)
-		//		_currentAnim->Stop();
-
-		//	_currentAnim = playerLink->moveDownAnim;
-
-		//	_position.y += POSITION_INCREMENT;
-		//	_orientation = DOWN;
-
-		//	_currentAnim->PlayOnce([&]() {
-		//		_currentAnim->Stop();
-
-		//		});
-
-		//	break;
-		//}
-		//case KB_LEFT:
-		//{
-		//	if (_currentAnim != nullptr)
-		//		_currentAnim->Stop();
-
-		//	_currentAnim = playerLink->moveLeftAnim;
-
-		//	_position.x -= POSITION_INCREMENT;
-		//	_orientation = LEFT;
-
-		//	_currentAnim->PlayOnce([&]() {
-		//		_currentAnim->Stop();
-		//		_currentAnim = nullptr;
-		//		});
-
-		//	break;
-		//}
-		//case KB_RIGHT:
-		//{
-		//	if (_currentAnim != nullptr)
-		//		_currentAnim->Stop();
-
-		//	_currentAnim = playerLink->moveRightAnim;
-
-		//	_position.x += POSITION_INCREMENT;
-		//	_orientation = RIGHT;
-
-		//	_currentAnim->PlayOnce([&]() {
-		//		_currentAnim->Stop();
-		//		_currentAnim = nullptr;
-		//		});
-
-		//	break;
-		//}
-		//}
+		CheckUpdate = false;
 	}
+	else
+	{
+		if (this->data->action == MOVE)
+		{
+
+
+			switch (this->data->orientation)
+			{
+			case UP:
+
+				if (_currentAnim != nullptr)
+				{
+					if(_currentAnim != playerLink->moveUpAnim && _currentAnim != playerLink->chargeUpAnim)
+						_currentAnim->Stop();
+
+				}
+				if (!data->hasBomb)
+					_currentAnim = playerLink->moveUpAnim;
+				else
+					_currentAnim = playerLink->chargeUpAnim;
+
+				if (!_currentAnim->IsPlaying())
+				{
+					_currentAnim->PlayOnce([&]() {
+						_currentAnim->Stop();
+
+						});
+				}
+
+				data->posY -= SPEED;
+				if (data->posY <= 30)
+					data->posY = 30;
+
+
+				break;
+			case DOWN:
+				if (_currentAnim != nullptr)
+				{
+					if (_currentAnim != playerLink->moveDownAnim && _currentAnim != playerLink->chargeDownAnim)
+						_currentAnim->Stop();
+
+				}
+
+				if (!data->hasBomb)
+					_currentAnim = playerLink->moveDownAnim;
+				else
+					_currentAnim = playerLink->chargeDownAnim;
+
+				if (!_currentAnim->IsPlaying())
+				{
+					_currentAnim->PlayOnce([&]() {
+						_currentAnim->Stop();
+
+						});
+				}
+
+				data->posY += SPEED;
+				if (data->posY >= WindowHeight() - 30)
+					data->posY = WindowHeight() - 30;
+
+				break;
+			case RIGHT:
+				if (_currentAnim != nullptr)
+				{
+					if (_currentAnim != playerLink->moveRightAnim && _currentAnim != playerLink->chargeRightAnim)
+						_currentAnim->Stop();
+
+				}
+				if (!data->hasBomb)
+					_currentAnim = playerLink->moveRightAnim;
+				else
+					_currentAnim = playerLink->chargeRightAnim;
+
+				if (!_currentAnim->IsPlaying())
+				{
+					_currentAnim->PlayOnce([&]() {
+						_currentAnim->Stop();
+
+						});
+				}
+
+
+				data->posX += SPEED;
+				if (data->posX >= WindowWidth() - 30)
+					data->posX = WindowWidth() - 30;
+				break;
+			case LEFT:
+				if(_currentAnim != nullptr)
+				{
+					if (_currentAnim != playerLink->moveLeftAnim && _currentAnim != playerLink->chargeLeftAnim)
+						_currentAnim->Stop();
+
+				}
+				if (!data->hasBomb)
+					_currentAnim = playerLink->moveLeftAnim;
+				else
+					_currentAnim = playerLink->chargeLeftAnim;
+
+				if (!_currentAnim->IsPlaying())
+				{
+
+					_currentAnim->PlayOnce([&]() {
+						_currentAnim->Stop();
+
+						});
+				}
+
+
+				data->posX -= SPEED;
+				if (data->posX <= 30)
+					data->posX = 30;
+				break;
+			default:
+				break;
+			}
+
+
+
+
+			name->setPosition(data->posX, data->posY);
+
+			playerLink->setPosition({ (float)this->data->posX, (float)this->data->posY });
+			if (name != nullptr)
+				name->setPosition({ (float)this->data->posX, (float)this->data->posY - 10 });
+
+
+		}
+	}
+	
+
 
 }
 
 void Player::UpdateValues(ClientData* data)
 {
 
-
+	CheckUpdate = true;
 
 
 	this->data = data;
@@ -214,8 +279,12 @@ void Player::UpdateValues(ClientData* data)
 		switch (this->data->orientation)
 		{
 		case UP:
+			if (_currentAnim != nullptr)
+			{
+				if (_currentAnim != playerLink->moveUpAnim && _currentAnim != playerLink->chargeUpAnim)
+					_currentAnim->Stop();
 
-			if(!data->hasBomb)
+			}			if(!data->hasBomb)
 				_currentAnim = playerLink->moveUpAnim;
 			else
 				_currentAnim = playerLink->chargeUpAnim;
@@ -231,7 +300,12 @@ void Player::UpdateValues(ClientData* data)
 			break;
 		case DOWN:
 
+			if (_currentAnim != nullptr)
+			{
+				if (_currentAnim != playerLink->moveDownAnim && _currentAnim != playerLink->chargeDownAnim)
+					_currentAnim->Stop();
 
+			}			
 			if (!data->hasBomb)
 				_currentAnim = playerLink->moveDownAnim;
 			else
@@ -247,7 +321,12 @@ void Player::UpdateValues(ClientData* data)
 			break;
 		case RIGHT:
 
+			if (_currentAnim != nullptr)
+			{
+				if (_currentAnim != playerLink->moveRightAnim && _currentAnim != playerLink->chargeRightAnim)
+					_currentAnim->Stop();
 
+			}			
 			if (!data->hasBomb)
 				_currentAnim = playerLink->moveRightAnim;
 			else
@@ -263,7 +342,12 @@ void Player::UpdateValues(ClientData* data)
 			break;
 		case LEFT:
 
+			if (_currentAnim != nullptr)
+			{
+				if (_currentAnim != playerLink->moveLeftAnim && _currentAnim != playerLink->chargeLeftAnim)
+					_currentAnim->Stop();
 
+			}
 			if (!data->hasBomb)
 				_currentAnim = playerLink->moveLeftAnim;
 			else
@@ -298,8 +382,8 @@ void Player::UpdateValues(ClientData* data)
 			case UP:
 				sword->setPosition(this->data->posX-5, this->data->posY -7);
 				sword->setRotation(0);
-				_currentAnim->Stop();
-
+				if (_currentAnim != nullptr)
+					_currentAnim->Stop();
 				_currentAnim = playerLink->atackUpAnim;
 
 
@@ -314,8 +398,8 @@ void Player::UpdateValues(ClientData* data)
 			case DOWN:
 				sword->setPosition(this->data->posX+40, this->data->posY + 45);
 				sword->setRotation(180);
-				_currentAnim->Stop();
-
+				if (_currentAnim != nullptr)
+					_currentAnim->Stop();
 				_currentAnim = playerLink->atackDownAnim;
 
 
@@ -329,8 +413,8 @@ void Player::UpdateValues(ClientData* data)
 			case RIGHT:
 				sword->setPosition(this->data->posX+20 +25, this->data->posY);
 				sword->setRotation(90);
-				_currentAnim->Stop();
-
+				if (_currentAnim != nullptr)
+					_currentAnim->Stop();
 				_currentAnim = playerLink->atackRightAnim;
 
 
@@ -344,8 +428,8 @@ void Player::UpdateValues(ClientData* data)
 			case LEFT:
 				sword->setPosition(this->data->posX+15 -25, this->data->posY+45);
 				sword->setRotation(270);
-				_currentAnim->Stop();
-
+				if (_currentAnim != nullptr)
+					_currentAnim->Stop();
 				_currentAnim = playerLink->atackLeftAnim;
 
 
@@ -367,7 +451,8 @@ void Player::UpdateValues(ClientData* data)
 			{
 			case UP:
 
-
+				if (_currentAnim != nullptr)
+					_currentAnim->Stop();
 				if (!data->hasBomb)
 					_currentAnim = playerLink->grabUpAnim;
 				else
@@ -382,6 +467,8 @@ void Player::UpdateValues(ClientData* data)
 
 				break;
 			case DOWN:
+				if (_currentAnim != nullptr)
+					_currentAnim->Stop();
 				if (!data->hasBomb)
 					_currentAnim = playerLink->grabDownAnim;
 				else
@@ -396,6 +483,8 @@ void Player::UpdateValues(ClientData* data)
 
 				break;
 			case RIGHT:
+				if (_currentAnim != nullptr)
+					_currentAnim->Stop();
 				if (!data->hasBomb)
 					_currentAnim = playerLink->grabRightAnim;
 				else
@@ -410,6 +499,8 @@ void Player::UpdateValues(ClientData* data)
 
 				break;
 			case LEFT:
+				if (_currentAnim != nullptr)
+					_currentAnim->Stop();
 				if (!data->hasBomb)
 					_currentAnim = playerLink->grabLeftAnim;
 				else
@@ -448,7 +539,7 @@ void Player::UpdateValues(ClientData* data)
 
 void Player::MoveUp()
 {
-	if (client->clientData->action == ATTACK || client->clientData->action == GRAB)
+	if (client->clientData->action == ATTACK && client->clientData->action == GRAB)
 		return;
 	//If the animation has not ended yet
 
@@ -466,7 +557,7 @@ void Player::MoveUp()
 
 void Player::MoveDown()
 {
-	if (client->clientData->action == ATTACK || client->clientData->action == GRAB)
+	if (client->clientData->action == ATTACK && client->clientData->action == GRAB)
 		return;
 
 
@@ -484,7 +575,7 @@ void Player::MoveDown()
 
 void Player::MoveLeft()
 {
-	if (client->clientData->action == ATTACK || client->clientData->action == GRAB)
+	if (client->clientData->action == ATTACK && client->clientData->action == GRAB)
 		return;
 
 	ClientData data = *client->clientData;
@@ -501,7 +592,7 @@ void Player::MoveLeft()
 
 void Player::MoveRight()
 {
-	if (client->clientData->action == ATTACK|| client->clientData->action == GRAB)
+	if (client->clientData->action == ATTACK && client->clientData->action == GRAB)
 		return;
 
 	ClientData data = *client->clientData;
@@ -517,7 +608,7 @@ void Player::MoveRight()
 
 void Player::Attack()
 {
-	if (client->clientData->action != ATTACK || client->clientData->action != GRAB)
+	if (client->clientData->action != ATTACK && client->clientData->action != GRAB)
 	{
 		ClientData data = *client->clientData;
 
@@ -535,7 +626,7 @@ void Player::Attack()
 
 void Player::Grab()
 {
-	if (client->clientData->action != ATTACK || client->clientData->action != GRAB)
+	if (client->clientData->action != ATTACK && client->clientData->action != GRAB)
 	{
 		ClientData data = *client->clientData;
 

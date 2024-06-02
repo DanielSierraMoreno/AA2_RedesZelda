@@ -400,11 +400,11 @@ Server::Server()
     mutex2.lock();
 
 
-    sf::Packet packet;
+    sf::Packet packet2;
 
-    packet << static_cast<int>(PacketKeys::DisconnectConfirmation);
+    packet2 << static_cast<int>(PacketKeys::DisconnectConfirmation);
 
-    SendPacket(player, packet);
+    SendPacket(player, packet2);
 
 
     if (clients.find(player->clientID) != clients.end())
@@ -643,7 +643,12 @@ void Server::GameLoop()
             for (int i = 0; i < eraseBomb.size(); i++)
             {
                 if (bombs.find(eraseBomb[i]) != bombs.end())
+                {
+                    BombData* data = bombs.find(eraseBomb[i])->second;
                     bombs.erase(eraseBomb[i]);
+
+                    delete data;
+                }
 
             }
 
@@ -735,10 +740,10 @@ void Server::GameLoop()
                         }
                     }
 
-
+                    ClientData* data = clients.find(eraseValues[i])->second;
 
                     clients.erase(eraseValues[i]);
-
+                    delete data;
 
                 }
 

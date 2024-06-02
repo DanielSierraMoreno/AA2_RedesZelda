@@ -11,7 +11,7 @@ enum ActionBomb { IDLEBOMB = 0, EXPLOTE = 1, STARTEXPLOSION = 2 };
 
 #define PORT 500;
 
-#define MOVESPEED 30;
+
 #define KNOCKBACK 10;
 #define WINDOWWIDTH 800;
 #define WINDOWHEIGHT 600;
@@ -69,8 +69,8 @@ public:
 
 
 	int lives = 3;
-	Action action = IDLE;
-	Orientation orientation = DOWN;
+	Action action;
+	Orientation orientation;
 	bool hasBomb = false;
 
 	bool IsMoving = false;

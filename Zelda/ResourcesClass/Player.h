@@ -33,14 +33,16 @@ public:
 	ClientData* lastFrameData;
 	ClientData* data;
 	sf::Text* name;
+	sf::Sprite* sword;
+	bool CheckUpdate;
 
 private:
 	Client* client;
-	sf::Sprite* sword;
 
 	Orientation _orientation;
 	Window* _window;
 	Animation* _currentAnim;
 	sf::Vector2f _position;
 	bool IsPlayer;
+
 };

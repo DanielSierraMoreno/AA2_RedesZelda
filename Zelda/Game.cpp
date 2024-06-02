@@ -55,15 +55,20 @@ void Game::DeletePlayer(int id)
 
     _window->EraseDrawable(players[id]->playerLink);
     _window->EraseDrawable(players[id]->name);
+    _window->EraseDrawable(players[id]->sword);
+
+
 
     players.erase(id);
-
 }
 
 void Game::DeleteBomb(int id)
 {
     _window->EraseDrawable(bombs[id]);
+
+
     bombs.erase(id);
+
 }
 
 void Game::AddPlayer(Client * client,ClientData* data, bool player)

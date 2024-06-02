@@ -21,8 +21,8 @@ Bomb::Bomb(Window* window, sf::Vector2f startPosition)
 
 Bomb::~Bomb()
 {
+	delete currentAnim;
 	delete staticBomb;
-	delete explosion;
 }
 
 
