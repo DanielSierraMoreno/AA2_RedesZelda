@@ -30,6 +30,6 @@ private:
     Window* _window;
     bool end;
     int checkConnection;
-
+    int chechActivity;
     Client* client;
 };

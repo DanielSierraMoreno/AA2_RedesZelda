@@ -4,7 +4,7 @@
 #include <random>
 
 
-enum class PacketKeys { LoginServer, UpdateRoom, LoginConfirmClient, UpdateClient, DisconnectClient, DisconnectClientToServer, DisconnectConfirmation, UpdateBombs};
+enum class PacketKeys { LoginServer, UpdateRoom, LoginConfirmClient, UpdateClient, DisconnectClient, DisconnectClientToServer, DisconnectConfirmation, UpdateBombs, CheckActivity};
 enum Orientation { UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3 };
 enum Action { IDLE = 0, MOVE = 1, ATTACK = 2, GRAB = 3 };
 enum ActionBomb { IDLEBOMB = 0, EXPLOTE = 1, STARTEXPLOSION = 2, RELEASE = 3 };
@@ -66,7 +66,7 @@ public:
 	int bombID;
 
 	float posX, posY;
-
+	int activity;
 
 	int lives = 3;
 	Action action;
@@ -81,13 +81,13 @@ private:
 
 	void Code(sf::Packet& packet) override {
 		
-		packet << clientID << ip << port << name << posX << posY << lives << (int)orientation << hasBomb << IsMoving << (int)action << checkAFK << bombID;
+		packet << clientID << ip << port << name << posX << posY << lives << (int)orientation << hasBomb << IsMoving << (int)action << checkAFK << bombID << activity;
 
 
 	}
 	void Decode(sf::Packet& packet) override {
 		int orient, act;
-		packet >> clientID >> ip >> port >> name >> posX >> posY >> lives >> orient >> hasBomb >> IsMoving >> act >> checkAFK >> bombID;
+		packet >> clientID >> ip >> port >> name >> posX >> posY >> lives >> orient >> hasBomb >> IsMoving >> act >> checkAFK >> bombID >> activity;
 		orientation = static_cast<Orientation>(orient);
 		action = static_cast<Action>(act);
 

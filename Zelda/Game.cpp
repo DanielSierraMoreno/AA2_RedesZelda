@@ -3,6 +3,7 @@
 
 Game::Game(Window* window, Client* client)
 {
+    chechActivity = 0;
     _window = window;
     this->client = client;
     end = false;
@@ -26,6 +27,7 @@ void Game::Run()
         {
             client->startTime = currentTimeMillis;
             client->startMove++;
+            
 
             for (auto it = players.begin(); it != players.end(); ++it)
             {
@@ -37,7 +39,25 @@ void Game::Run()
 
             }
 
+
+
+            chechActivity++;
+
+            if (chechActivity >= client->frameRate / 2)
+            {
+                chechActivity = 0;
+
+                sf::Packet p;
+                p << static_cast<int>(PacketKeys::CheckActivity) << *client->clientData;
+
+
+
+                client->SendPacket(p);
+            }
         }
+
+
+
 
     }
     sf::Packet p;

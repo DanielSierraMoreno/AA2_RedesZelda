@@ -53,6 +53,12 @@ Server::Server()
     } 
     });
 
+    packets.insert({ PacketKeys::CheckActivity, [this](sf::Packet packet, ClientData* player) {
+
+         clients[player->clientID]->activity = 0;
+    }
+    });
+
     packets.insert({ PacketKeys::UpdateClient, [this](sf::Packet packet, ClientData* player) {
 
         mutex2.lock();
@@ -676,6 +682,20 @@ void Server::GameLoop()
 
             for (auto it = clients.begin(); it != clients.end(); it++) {
 
+                it->second->activity++;
+
+                //Si esta mas de 5 segundos sin reiniciar el estado de actividad lo elimina, el cliente se ha apagado
+                if (it->second->activity >= frameRate*5)
+                {
+                    std::cout << "Player is disconnected" << std::endl;
+
+                    sf::Packet p;
+                    p << static_cast<int>(PacketKeys::DisconnectClient);
+                    SendPacket(it->second, p);
+                    eraseValues.push_back(it->first);
+                }
+
+
                 if ((currentTimeMillis - it->second->actionStartTime) >= 1000 && (it->second->action != MOVE && it->second->action != IDLE))
                 {
                     it->second->action = IDLE;
@@ -718,7 +738,7 @@ void Server::GameLoop()
 
             //2 veces por segundo le suma a cada cliente +1 a checkAFK
             //Si el cliente no envia un PacketKeys::UpdateClient checkAFK sigue sumando, si si que lo envia se reinicia
-            //Si  checkAFK llega a 30 == 15 segundos sin enviar info, lo desconecta
+            //Si  checkAFK llega a 30 == 15 segundos sin enviar info, lo desconecta AFK
 
             if (checkAFKS % (frameRate / 2) == 0)
             {
